@@ -1,0 +1,26 @@
+@use 'style/design.scss';
+
+.header-wrapper {
+	width: 90%;
+	margin: 25px 5%;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-wrapper img {
+	width: 50%;
+	max-width: 200px;
+}
+
+.header-wrapper nav {
+	width: 50%;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+}
+
+.header-wrapper .spacer {
+	height: 0px;
+	width: 15%;
+}
