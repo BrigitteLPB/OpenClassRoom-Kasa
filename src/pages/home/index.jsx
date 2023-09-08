@@ -1,8 +1,11 @@
+import Header from "components/common/header";
+
 function Home() {
 	return (
-		<h1>
-			hello world
-		</h1>
+		<div>
+			<Header/>
+			<h1>hello world</h1>
+		</div>
 	);
 }
 

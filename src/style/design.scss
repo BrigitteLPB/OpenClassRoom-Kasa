@@ -1,0 +1,26 @@
+// colors
+$primary-color: #FF6060;
+$secondary-color: #000000;
+$tertiary-color: #FFFFFF;
+
+// texts
+$normal-text-font: "Montserrat";
+$text-size-title: 24px;
+$text-size-normal: 18px;
+
+@font-face {
+    font-family: $normal-text-font;
+    src:url("./../assets/fonts/Montserrat/static/Montserrat-Regular.ttf");
+}
+
+.text-title {
+	font-size: $text-size-title;
+	color: $primary-color;
+	text-decoration: none;
+}
+
+.text-normal {
+	font-size: $text-size-normal;
+	color: $primary-color;
+	text-decoration: none;
+}

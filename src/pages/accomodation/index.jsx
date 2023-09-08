@@ -1,12 +1,14 @@
 import { useParams } from 'react-router-dom'
+import Header from 'components/common/header';
 
 function Accomodation() {
     const { accomodation_id } = useParams()
 
 	return (
-		<h1>
+		<div>
+			<Header/>
 			Accomodation : {accomodation_id}
-		</h1>
+		</div>
 	);
 }
 
