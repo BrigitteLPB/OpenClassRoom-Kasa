@@ -1,0 +1,53 @@
+@import 'style/design.scss';
+
+.accomodation-item-wrapper {
+	border-radius: 10px;
+	width: 100%;
+	aspect-ratio: 1.5;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+
+	position: relative;
+}
+
+.accomodation-item-wrapper img {
+	background-color: $primary-color;
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	border: none;
+	display: block;
+	object-fit: cover;
+	box-shadow: inset 0px 800px -500px -500px #000;
+}
+
+.accomodation-item-wrapper .img-black-filter {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border-radius: 10px;
+	background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 50%);
+}
+
+.accomodation-item-wrapper .accomodation-title {
+	margin: 0;
+	color: $tertiary-color;
+	padding: 20px;
+	position: absolute;
+
+	font-size: $text-size-title;
+}
+
+
+// desktop
+@media (min-width: $min-desktop-size) {
+	.accomodation-item-wrapper {
+		width: calc(100% / 3 - 40px);
+		aspect-ratio: 1;
+	}
+}
