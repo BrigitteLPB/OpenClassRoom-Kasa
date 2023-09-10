@@ -8,12 +8,15 @@ import About from 'pages/about/index';
 import Accomodation from 'pages/accomodation/index';
 
 import 'style/index.css';
+import Header from 'components/common/header';
+import Footer from 'components/common/footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
         <Router>
+            <Header></Header>
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/accueil" element={<Home/>}/>
@@ -21,6 +24,7 @@ root.render(
                 <Route path="/fiche-logement/:accomodation_id" element={<Accomodation/>}/>
                 <Route path="*" element={<PageNotFound/>}/>
             </Routes>
+            <Footer></Footer>
         </Router>
     </React.StrictMode>
 )
