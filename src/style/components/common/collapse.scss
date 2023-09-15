@@ -1,0 +1,59 @@
+@import 'style/design.scss';
+
+.collapse {
+	color: white;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.collapse>button {
+	background-color: $primary-color;
+	color: $tertiary-color;
+	border: none;
+	width: 100%;
+	height: 60px;
+	margin: 0;
+	padding: 20px;
+	text-align: left;
+	border-radius: $border-raduis;
+
+	position: absolute;
+	z-index: 1;
+}
+
+.collapse>button:after {
+	content: '\02C4';
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+	transition: rotate 0.4s ease-out;
+}
+
+.collapse>button.active:after {
+	rotate: 180deg;
+}
+
+.collapse > .content {
+	display: flex;
+	flex-direction: column;
+	padding: 60px 13px 0px 13px;
+	transition: max-height 0.4s;
+
+	max-height: 0px;
+	overflow: hidden;
+	background-color: $tertiary-color-2;
+	color: $primary-color;
+	position: relative;
+
+	border-radius: $border-raduis;
+}
