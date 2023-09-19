@@ -6,7 +6,7 @@ var fs = require("fs");
 app.get('/api/accomodation', function (req, res) {
 	fs.readFile(__dirname + "/data/logements.json", 'utf8', function (err, data) {
 		res.contentType("application/json");
-		res.setHeader("Access-Control-Allow-Origin", req.header("Origin"))
+		res.setHeader("Access-Control-Allow-Origin", req.header("Origin") ?? "*")
 
 		res.end(data);
 	});
@@ -15,15 +15,16 @@ app.get('/api/accomodation', function (req, res) {
 app.get('/api/accomodation/:id', function (req, res) {
 	fs.readFile(__dirname + "/data/logements.json", 'utf8', function (err, data) {
 		res.contentType("application/json");
-		res.setHeader("Access-Control-Allow-Origin", req.header("Origin"))
-		parsed_data = JSON.parse(data);
+		res.setHeader("Access-Control-Allow-Origin", req.header("Origin") ?? "*")
 
-		if(req.params.id in parsed_data){
-			res.end(JSON.stringify(parsed_data[req.params.id]));
-		}else{
-			res.statusCode = 404;
-			res.end(JSON.stringify({}));
+		for(data of JSON.parse(data)){
+			if(req.params.id == data.id){
+				res.end(JSON.stringify(data));
+				return;
+			}
 		}
+		res.statusCode = 404;
+		res.end(JSON.stringify({}));
 	});
 })
 
