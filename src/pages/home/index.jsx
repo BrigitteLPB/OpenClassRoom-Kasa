@@ -1,11 +1,18 @@
 import home_banner from "assets/home-banner.png"
-
 import "style/pages/home.scss"
 import AccomodationCard from "components/accomodation_card";
 
-function Home() {
-	const logement_id = Array.from(Array(9).keys())
+import { useState, useEffect } from "react";
 
+function Home() {
+	const [all_logements, set_all_logements] = useState([]);
+
+	useEffect(() => {
+		fetch(`${process.env.REACT_APP_API_ENDPOINT}/api/accomodation`)
+			.then((response) => response.json())
+			.then((response) => set_all_logements(response))
+			.catch((err) => console.log(err))
+	}, [])
 
 	return (
 		<div className="page-wrapper" id="home-page">
@@ -15,12 +22,9 @@ function Home() {
 			<div className="height-spacer"></div>
 			<div className="accomodation-list-wrapper">
 				{
-					logement_id.map(id => (
-						<AccomodationCard logement_data={{
-							id: id,
-							title: "Titre de la location"
-						}}/>
-					))
+					(all_logements)? all_logements.map(logement => (
+						<AccomodationCard logement_data={logement} />
+					)) : null
 				}
 			</div>
 		</div>

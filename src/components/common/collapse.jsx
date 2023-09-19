@@ -7,11 +7,7 @@ function Collapse({title, children}){
 		element.classList.toggle("active");
 		const content_element = element.nextSibling;
 
-		if (content_element.style.maxHeight === "200px"){
-			content_element.style.maxHeight = "0px";
-		}else{
-			content_element.style.maxHeight = "200px";
-		}
+		content_element.classList.toggle("open");
 	}
 
 	return (
