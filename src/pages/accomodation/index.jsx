@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import "style/pages/accomodation.scss";
 import Carousel from "components/carousel";
 import Collapse from "components/common/collapse";
+import Tags from "components/tags";
+import Rating from "components/rating";
 
 function Accomodation() {
 	const naviguate = useNavigate();
@@ -20,29 +22,32 @@ function Accomodation() {
 
 	return (
 		(logement) ? (
-			<div>
-				<Carousel picture_urls={logement.pictures}/>
-				<p>title: {logement.title}</p>
-				<p>location: {logement.location}</p>
-				<div>
-					<p>tags :</p>
-					{logement.tags.map(tag => (
-						<p key={`accomodation-tag-${tag}`}>{tag}</p>
-					))}
+			<div id="accomodation">
+				{/* <Carousel picture_urls={logement.pictures}/> */}
+				<div className="two-column-wrapper">
+					<div className="accomodation-info-wrapper">
+						<h1 className="text-title">{logement.title}</h1>
+						<p className="text-normal">{logement.location}</p>
+						<Tags tags={logement.tags}/>
+					</div>
+					<div className="host-info-wrapper">
+						<div>
+							<p className="text-normal">{logement.host.name}</p>
+							<img className="host-image" src={logement.host.picture} alt="" />
+						</div>
+						<Rating max_rating={5} rating_number={logement.rating}/>
+					</div>
 				</div>
-				<div>
-					<p>host :</p>
-					<p>Name: {logement.host.name}</p>
-					<img src={logement.host.picture} alt="" />
+				<div className="two-column-wrapper">
+					<Collapse title="Description">
+						<p>{logement.description}</p>
+					</Collapse>
+					<Collapse title="Équipements">
+						{logement.equipments.map(equipment => (
+							<p key={`accomodation-equipment-${equipment}`}>{equipment}</p>
+						))}
+					</Collapse>
 				</div>
-				<Collapse title="Équipements">
-					{logement.equipments.map(equipment => (
-						<p key={`accomodation-equipment-${equipment}`}>{equipment}</p>
-					))}
-				</Collapse>
-				<Collapse title="Description">
-					<p>{logement.description}</p>
-				</Collapse>
 			</div>
 		) : null
 	);
