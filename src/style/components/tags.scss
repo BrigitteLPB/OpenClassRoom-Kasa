@@ -1,0 +1,14 @@
+@import 'style/design.scss';
+
+.tags-wrapper {
+	display: inline-flex;
+	gap: 30px;
+}
+
+.tags-wrapper .tag-item {
+	background-color: $primary-color;
+	border-radius: $border-raduis;
+	padding: 5px 30px;
+
+	color: $tertiary-color
+}

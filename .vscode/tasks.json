@@ -5,23 +5,24 @@
 	"tasks": [
 		{
 			"label": "start app",
-			"dependsOn":[
+			"dependsOn": [
 				"front start",
-				"backend start",
+				"backend start"
 			],
 			"dependsOrder": "parallel",
+			"problemMatcher": []
 		},
 		{
 			"label": "front start",
 			"type": "shell",
 			"command": "yarn start",
-			"problemMatcher": [],
+			"problemMatcher": []
 		},
 		{
 			"label": "backend start",
 			"type": "shell",
 			"command": "node backend/",
-			"problemMatcher": [],
+			"problemMatcher": []
 		}
 	]
 }
