@@ -23,7 +23,7 @@ function Accomodation() {
 	return (
 		(logement) ? (
 			<div id="accomodation">
-				{/* <Carousel picture_urls={logement.pictures}/> */}
+				<Carousel picture_urls={logement.pictures}/>
 				<div className="two-column-wrapper">
 					<div className="accomodation-info-wrapper">
 						<h1 className="text-title">{logement.title}</h1>
