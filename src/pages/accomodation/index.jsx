@@ -28,15 +28,17 @@ function Accomodation() {
 					<div className="accomodation-info-wrapper">
 						<h1 className="text-title">{logement.title}</h1>
 						<p className="text-normal">{logement.location}</p>
-						<Tags tags={logement.tags}/>
 					</div>
 					<div className="host-info-wrapper">
 						<div>
 							<p className="text-normal">{logement.host.name}</p>
 							<img className="host-image" src={logement.host.picture} alt="" />
 						</div>
-						<Rating max_rating={5} rating_number={logement.rating}/>
 					</div>
+				</div>
+				<div className="two-column-wrapper tags-and-rating-wrapper">
+					<Tags tags={logement.tags}/>
+					<Rating max_rating={5} rating_number={logement.rating}/>
 				</div>
 				<div className="two-column-wrapper">
 					<Collapse title="Description">
