@@ -1,0 +1,42 @@
+@import 'style/design.scss';
+
+.carousel {
+	position: relative;
+}
+
+#image-wrapper .image-hide {
+	display: none;
+}
+
+#image-wrapper img {
+	height: 500px;
+	width: 100%;
+	object-fit: cover;
+	border-radius: $border-radius;
+}
+
+.carousel .carousel-hud {
+	position: absolute;
+}
+
+.carousel button {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+.carousel #carousel-prev-button {
+	top: 50%;
+	left: 20px;
+}
+
+.carousel #carousel-next-button {
+	top: 50%;
+	right: 20px;
+}
+
+.carousel #image-count-display {
+	left: 50%;
+	bottom: 0;
+	color: $tertiary-color;
+}

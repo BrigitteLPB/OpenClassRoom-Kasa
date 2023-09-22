@@ -23,7 +23,7 @@ function Home() {
 			<div className="accomodation-list-wrapper">
 				{
 					(all_logements)? all_logements.map(logement => (
-						<AccomodationCard logement_data={logement} />
+						<AccomodationCard key={`accomodation-card-${logement.id}`} logement_data={logement} />
 					)) : null
 				}
 			</div>

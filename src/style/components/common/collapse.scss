@@ -24,7 +24,7 @@
 	margin: 0;
 	padding: 20px;
 	text-align: left;
-	border-radius: $border-raduis;
+	border-radius: $border-radius;
 
 	position: absolute;
 	z-index: 1;
@@ -55,7 +55,7 @@
 	color: $primary-color;
 	position: relative;
 
-	border-radius: $border-raduis;
+	border-radius: $border-radius;
 }
 
 .collapse > .open {
