@@ -1,11 +1,12 @@
+import "style/components/common/footer.scss";
+import Logo from "components/logo";
+
 function Footer(){
 	return (
-		<div style={{
-			backgroundColor: "black",
-			innerWidth: "100%",
-			height: "50px",
-		}}>
-		</div>
+		<footer className="footer">
+			<Logo/>
+			<p>© 2020 Kasa. All rights reserved</p>
+		</footer>
 	)
 }
 

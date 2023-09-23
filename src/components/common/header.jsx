@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import logo from "assets/LOGO.svg"
+import Logo from "components/logo";
 
 import "style/components/common/header.scss"
 
@@ -7,7 +7,7 @@ import "style/components/common/header.scss"
 function Header(){
 	return (
 		<header className="page-wrapper header-wrapper">
-			<img src={logo} alt="Kasa" />
+			<Logo></Logo>
 			<nav>
 				<Link to="/" className="text-normal">Accueil</Link>
 				<div className="spacer"></div>
