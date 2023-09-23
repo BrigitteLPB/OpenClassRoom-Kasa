@@ -1,4 +1,8 @@
-@use 'style/design.scss';
+@import 'style/design.scss';
+
+.kasa-logo {
+	fill: $primary-color;
+}
 
 .header-wrapper {
 	display: inline-flex;
