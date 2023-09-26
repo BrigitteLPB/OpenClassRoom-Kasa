@@ -1,5 +1,5 @@
 // size
-$min-desktop-size: 700px;
+$min-desktop-size: 800px;
 
 // colors
 $primary-color: #FF6060;
@@ -11,16 +11,52 @@ $tertiary-color-2: #F1F1F1;
 $normal-text-font: "Montserrat";
 $text-size-title: 24px;
 $text-size-normal: 18px;
-
+$text-sizes: 10px, 12px, 14px, 16px, 18px, 24px, 36px, 48px, 96px, 288px;
 
 // border
 $border-radius: 10px;
+
+
+@mixin text {
+	text-decoration: none;
+	font-style: normal;
+}
 
 
 @font-face {
     font-family: $normal-text-font;
     src:url("./../assets/fonts/Montserrat/static/Montserrat-Regular.ttf");
 }
+
+@each $color-name, $color-code in ("primary": $primary-color, "secondary": $secondary-color, "tertiary": $tertiary-color) {
+	@each $text-size in $text-sizes {
+		// all format
+		.text-#{$color-name}-#{$text-size} {
+			@include text;
+			font-size: $text-size;
+			color: $color-code;
+		}
+
+		// pc format
+		@media (min-width: $min-desktop-size) {
+			.text-#{$color-name}-#{$text-size}-desktop {
+				@include text;
+				font-size: $text-size;
+				color: $color-code;
+			}
+		}
+
+		// mobile format
+		@media (max-width: $min-desktop-size) {
+			.text-#{$color-name}-#{$text-size}-mobile {
+				@include text;
+				font-size: $text-size;
+				color: $color-code;
+			}
+		}
+	}
+}
+
 
 .text-title {
 	font-size: $text-size-title;

@@ -20,6 +20,10 @@
 	width: 75%;
 }
 
+#accomodation .two-column-wrapper .accomodation-info-wrapper > * {
+	margin: 0;
+}
+
 #accomodation .host-info-wrapper {
 	width: 25%;
 	height: 100%;
@@ -32,6 +36,10 @@
 	align-items: center;
 	justify-content: flex-end;
 	gap: 30px;
+}
+
+#accomodation .host-info-wrapper > div > p {
+	margin: 0;
 }
 
 #accomodation .host-image {

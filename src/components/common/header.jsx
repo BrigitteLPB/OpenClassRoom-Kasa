@@ -9,9 +9,9 @@ function Header(){
 		<header className="page-wrapper header-wrapper">
 			<Logo></Logo>
 			<nav>
-				<Link to="/" className="text-normal">Accueil</Link>
+				<Link to="/" className="text-primary-24px-desktop text-primary-12px-mobile">Accueil</Link>
 				<div className="spacer"></div>
-				<Link to="/a-propos" className="text-normal">A propos</Link>
+				<Link to="/a-propos" className="text-primary-24px-desktop text-primary-12px-mobile">A propos</Link>
 			</nav>
 		</header>
 	);

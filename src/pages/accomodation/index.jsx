@@ -26,12 +26,12 @@ function Accomodation() {
 				<Carousel picture_urls={logement.pictures}/>
 				<div className="two-column-wrapper">
 					<div className="accomodation-info-wrapper">
-						<h1 className="text-title">{logement.title}</h1>
-						<p className="text-normal">{logement.location}</p>
+						<h1 className="text-primary-36px-desktop text-primary-18px-mobile">{logement.title}</h1>
+						<p className="text-primary-18px-desktop text-primary-14px-mobile">{logement.location}</p>
 					</div>
 					<div className="host-info-wrapper">
 						<div>
-							<p className="text-normal">{logement.host.name}</p>
+							<p className="text-primary-18px-desktop text-primary-12px-mobile">{logement.host.name}</p>
 							<img className="host-image" src={logement.host.picture} alt="" />
 						</div>
 					</div>
