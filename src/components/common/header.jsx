@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom"
-import Logo from "components/logo";
+import Logo from "components/common/logo";
 
 import "style/components/common/header.scss"
 
