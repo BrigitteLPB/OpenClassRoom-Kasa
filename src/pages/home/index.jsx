@@ -16,7 +16,7 @@ function Home() {
 
 	return (
 		<div className="page-wrapper" id="home-page">
-			<h1 className="home-title text-title" style={{
+			<h1 className="home-title text-tertiary-48px-desktop text-tertiary-24px-mobile" style={{
 				backgroundImage: `url(${home_banner})`,
 			}}>Chez vous, partout et ailleurs</h1>
 			<div className="height-spacer"></div>

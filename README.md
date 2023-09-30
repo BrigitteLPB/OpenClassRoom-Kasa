@@ -2,7 +2,7 @@ A React web site for Kasa
 
 # Install project
 
-install both frontend and backend (only for test) with '
+install both frontend and backend (only for test) with :
 
 - >`yarn install`
 - >`cd backend/ && yarn install`

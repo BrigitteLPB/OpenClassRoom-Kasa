@@ -13,51 +13,60 @@
 	display: flex;
 	flex-direction: column;
 	position: relative;
-}
 
-.collapse>button {
-	background-color: $primary-color;
-	color: $tertiary-color;
-	border: none;
-	width: 100%;
-	height: 60px;
-	margin: 0;
-	padding: 20px;
-	text-align: left;
-	border-radius: $border-radius;
+	button {
+		background-color: $primary-color;
+		color: $tertiary-color;
+		border: none;
+		width: 100%;
+		height: 40px;
+		margin: 0;
+		padding: 20px 10px;
+		border-radius: $border-radius;
 
-	position: absolute;
-	z-index: 1;
-}
+		position: absolute;
+		z-index: 1;
 
-.collapse>button:after {
-	content: '\02C4';
-	color: white;
-	font-weight: bold;
-	float: right;
-	margin-left: 5px;
-	transition: rotate 0.4s linear;
-}
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
 
-.collapse>button.active:after {
-	rotate: 180deg;
-}
+		@media (min-width: $min-desktop-size){
+			padding: 20px;
+			height: 60px;
+		}
+	}
 
-.collapse > .content {
-	display: flex;
-	flex-direction: column;
-	padding: 60px 13px 0px 13px;
-	transition: max-height 0.4s linear;
-	max-height: 0px;
-	overflow: hidden;
+	.arrow-icon {
+		fill: white;
+		transition: rotate 0.4s ease-in-out;
+	}
 
-	background-color: $tertiary-color-2;
-	color: $primary-color;
-	position: relative;
+	.arrow-rotate {
+		rotate: 180deg;
+	}
 
-	border-radius: $border-radius;
-}
+	.content {
+		display: flex;
+		flex-direction: column;
+		padding: 40px 13px 0px 13px;
+		transition: max-height 0.4s ease-in-out;
+		max-height: 0px;
+		overflow: hidden;
 
-.collapse > .open {
-	max-height: 200px;
+		background-color: $tertiary-color-2;
+		color: $primary-color;
+		position: relative;
+
+		border-radius: $border-radius;
+
+		@media (min-width: $min-desktop-size){
+			padding-top: 60px;
+		}
+	}
+
+	.open {
+		max-height: 200px;
+	}
 }

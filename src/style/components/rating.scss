@@ -2,17 +2,16 @@
 
 .rating-wrapper {
 	display: inline-flex;
-	gap: 10px;
-}
 
-.rating-icon {
-	width: 30px;
-}
+	.rating-icon {
+		width: 30px;
+	}
 
-.colored-icon {
-	fill: $primary-color;
-}
+	.colored-icon {
+		fill: $primary-color;
+	}
 
-.uncolored-icon {
-	fill: #E3E3E3;
+	.uncolored-icon {
+		fill: #E3E3E3;
+	}
 }
