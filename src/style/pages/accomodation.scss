@@ -47,7 +47,7 @@
 
 		@media (min-width: $min-desktop-size){
 			flex-direction: column-reverse;
-			justify-content: center;
+			justify-content: space-around;
 			align-items: flex-end;
 		}
 

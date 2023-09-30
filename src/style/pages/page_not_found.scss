@@ -8,18 +8,21 @@
 	margin: 40px 0;
 	padding: 0 5%;
 	gap: 50px;
-}
 
-#page-not-found > h1 {
-	margin: 0;
-}
+	h1 {
+		margin: 0;
+	}
 
-#page-not-found > h2 {
-	font-size: 36px;
-	margin: 0;
-	text-align: center;
-}
+	h2 {
+		font-size: 36px;
+		margin: 0;
+		text-align: center;
 
-#page-not-found > a {
-	text-decoration: underline;
+	}
+
+	a {
+		text-decoration: underline;
+	}
+
+
 }

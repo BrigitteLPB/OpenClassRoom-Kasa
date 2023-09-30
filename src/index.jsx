@@ -7,10 +7,9 @@ import PageNotFound from 'pages/page_not_found/'
 import About from 'pages/about/index';
 import Accomodation from 'pages/accomodation/index';
 
-import 'style/index.css';
+import 'style/index.scss';
 import Header from 'components/common/header';
 import Footer from 'components/common/footer';
-import { useReducer } from 'react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

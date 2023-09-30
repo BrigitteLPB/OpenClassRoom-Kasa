@@ -21,15 +21,12 @@
 		flex-grow: 1;
 		flex-basis: 1;
 		justify-content: center;
-	}
-}
 
-// desktop
-@media (min-width: $min-desktop-size) {
-	#home-page .accomodation-list-wrapper {
-		background-color: #F6F6F6;
-		padding: 30px;
-		border-radius: $border-radius;
-		gap: 40px;
+		@media (min-width: $min-desktop-size) {
+			background-color: #F6F6F6;
+			padding: 30px;
+			border-radius: $border-radius;
+			gap: 40px;
+		}
 	}
 }
