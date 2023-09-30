@@ -24,23 +24,19 @@ function Accomodation() {
 		(logement) ? (
 			<div id="accomodation">
 				<Carousel picture_urls={logement.pictures}/>
-				<div className="two-column-wrapper">
-					<div className="accomodation-info-wrapper">
-						<h1 className="text-primary-36px-desktop text-primary-18px-mobile">{logement.title}</h1>
-						<p className="text-primary-18px-desktop text-primary-14px-mobile">{logement.location}</p>
-					</div>
-					<div className="host-info-wrapper">
-						<div>
-							<p className="text-primary-18px-desktop text-primary-12px-mobile">{logement.host.name}</p>
-							<img className="host-image" src={logement.host.picture} alt="" />
-						</div>
-					</div>
-				</div>
-				<div className="two-column-wrapper tags-and-rating-wrapper">
+				<div className="accomodation-info-wrapper">
+					<h1 className="text-primary-36px-desktop text-primary-18px-mobile">{logement.title}</h1>
+					<p className="text-primary-18px-desktop text-primary-14px-mobile">{logement.location}</p>
 					<Tags tags={logement.tags}/>
-					<Rating max_rating={5} rating_number={logement.rating}/>
 				</div>
-				<div className="two-column-wrapper">
+				<div className="host-info-wrapper">
+					<Rating max_rating={5} rating_number={logement.rating}/>
+					<div className="host-personal-info-wrapper">
+						<p className="text-primary-18px-desktop text-primary-12px-mobile">{logement.host.name}</p>
+						<img className="host-image" src={logement.host.picture} alt="" />
+					</div>
+				</div>
+				<div className="accomodation-collapse-wrapper">
 					<Collapse title="Description">
 						<p>{logement.description}</p>
 					</Collapse>

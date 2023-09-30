@@ -2,7 +2,11 @@
 
 .tags-wrapper {
 	display: inline-flex;
-	gap: 30px;
+	gap: 10px;
+
+	@media (min-width: $min-desktop-size){
+		gap: 30px;
+	}
 }
 
 .tags-wrapper .tag-item {

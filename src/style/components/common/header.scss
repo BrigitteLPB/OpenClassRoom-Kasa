@@ -1,33 +1,36 @@
 @import 'style/design.scss';
 
-.kasa-logo {
-	fill: $primary-color;
-	width: 25%;
-}
 
-.select-nav {
-	text-decoration: underline!important;
-}
 
-.header-wrapper {
+header.header-wrapper {
 	display: inline-flex;
 	justify-content: space-between;
 	align-items: center;
-}
 
-.header-wrapper img {
-	width: 50%;
-	max-width: 200px;
-}
+	.kasa-logo {
+		fill: $primary-color;
+		width: 50%;
+	}
 
-.header-wrapper nav {
-	width: 50%;
-	display: flex;
-	justify-content: flex-end;
-	flex-wrap: wrap;
-}
+	@media (min-width: $min-desktop-size) {
+		.kasa-logo {
+			width: 25%;
+		}
+	}
 
-.header-wrapper .spacer {
-	height: 0px;
-	width: 15%;
+	nav {
+		width: 50%;
+		display: flex;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+	}
+
+	.spacer {
+		height: 0px;
+		width: 15%;
+	}
+
+	.select-nav {
+		text-decoration: underline!important;
+	}
 }

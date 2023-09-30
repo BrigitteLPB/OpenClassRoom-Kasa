@@ -13,51 +13,60 @@
 	display: flex;
 	flex-direction: column;
 	position: relative;
-}
 
-.collapse>button {
-	background-color: $primary-color;
-	color: $tertiary-color;
-	border: none;
-	width: 100%;
-	height: 60px;
-	margin: 0;
-	padding: 20px;
-	border-radius: $border-radius;
+	button {
+		background-color: $primary-color;
+		color: $tertiary-color;
+		border: none;
+		width: 100%;
+		height: 40px;
+		margin: 0;
+		padding: 20px 10px;
+		border-radius: $border-radius;
 
-	position: absolute;
-	z-index: 1;
+		position: absolute;
+		z-index: 1;
 
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-}
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
 
-.collapse .arrow-icon {
-	fill: white;
-	transition: rotate 0.4s ease-in-out;
-}
+		@media (min-width: $min-desktop-size){
+			padding: 20px;
+			height: 60px;
+		}
+	}
 
-.collapse .arrow-rotate {
-	rotate: 180deg;
-}
+	.arrow-icon {
+		fill: white;
+		transition: rotate 0.4s ease-in-out;
+	}
 
-.collapse > .content {
-	display: flex;
-	flex-direction: column;
-	padding: 60px 13px 0px 13px;
-	transition: max-height 0.4s ease-in-out;
-	max-height: 0px;
-	overflow: hidden;
+	.arrow-rotate {
+		rotate: 180deg;
+	}
 
-	background-color: $tertiary-color-2;
-	color: $primary-color;
-	position: relative;
+	.content {
+		display: flex;
+		flex-direction: column;
+		padding: 40px 13px 0px 13px;
+		transition: max-height 0.4s ease-in-out;
+		max-height: 0px;
+		overflow: hidden;
 
-	border-radius: $border-radius;
-}
+		background-color: $tertiary-color-2;
+		color: $primary-color;
+		position: relative;
 
-.collapse > .open {
-	max-height: 200px;
+		border-radius: $border-radius;
+
+		@media (min-width: $min-desktop-size){
+			padding-top: 60px;
+		}
+	}
+
+	.open {
+		max-height: 200px;
+	}
 }

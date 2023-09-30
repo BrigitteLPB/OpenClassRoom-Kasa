@@ -1,42 +1,61 @@
 @import 'style/design.scss';
 
-.carousel {
-	position: relative;
-}
-
-#image-wrapper .image-hide {
-	display: none;
-}
-
-#image-wrapper img {
-	aspect-ratio: 3;
-	width: 100%;
-	object-fit: cover;
-	border-radius: $border-radius;
-}
-
-.carousel .carousel-hud {
+@mixin carousel-hud {
 	position: absolute;
 }
 
-.carousel button {
-	border: none;
-	background: none;
-	cursor: pointer;
-}
+.carousel {
+	position: relative;
+	width: 100%;
 
-.carousel #carousel-prev-button {
-	top: 50%;
-	left: 20px;
-}
+	#image-wrapper img {
+		aspect-ratio: 1;
+		width: 100%;
+		object-fit: cover;
+		border-radius: $border-radius;
 
-.carousel #carousel-next-button {
-	top: 50%;
-	right: 20px;
-}
+		@media (min-width: $min-desktop-size) {
+			aspect-ratio: 3;
+		}
+	}
 
-.carousel #image-count-display {
-	left: 50%;
-	bottom: 10px;
-	color: $tertiary-color;
+	#image-wrapper .image-hide {
+		display: none;
+	}
+
+	.carousel-prev-button, .carousel-next-button, .image-count-display {
+		@include carousel-hud;
+	}
+
+	.carousel-prev-button, .carousel-next-button {
+		border: none;
+		background: none;
+		cursor: pointer;
+		height: 10%;
+		margin: 0 2%;
+		padding: 0;
+		transform: translate(0, -50%);
+
+		svg {
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	.carousel-prev-button {
+		top: 50%;
+		left: 0;
+	}
+
+	.carousel-next-button {
+		top: 50%;
+		right: 0;
+	}
+
+	.image-count-display {
+		left: 50%;
+		bottom: 0;
+		margin: 0 0 2% 0;
+		color: $tertiary-color;
+	}
 }

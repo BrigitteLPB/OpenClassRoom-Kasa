@@ -11,9 +11,9 @@ function Header(){
 		<header className="page-wrapper header-wrapper">
 			<Logo/>
 			<nav>
-				<Link to="/" className={`text-primary-24px-desktop text-primary-12px-mobile ${location.pathname == "/" ? "select-nav" : ""}`}>Accueil</Link>
+				<Link to="/" className={`text-primary-24px-desktop text-primary-18px-mobile ${location.pathname == "/" ? "select-nav" : ""}`}>Accueil</Link>
 				<div className="spacer"></div>
-				<Link to="/a-propos" className={`text-primary-24px-desktop text-primary-12px-mobile ${location.pathname == "/a-propos" ? "select-nav" : ""}`}>A propos</Link>
+				<Link to="/a-propos" className={`text-primary-24px-desktop text-primary-18px-mobile ${location.pathname == "/a-propos" ? "select-nav" : ""}`}>A propos</Link>
 			</nav>
 		</header>
 	);
