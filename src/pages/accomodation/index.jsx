@@ -15,7 +15,7 @@ function Accomodation() {
 
 	useEffect(() => {
 		fetch(`${process.env.REACT_APP_API_ENDPOINT}/api/accomodation/${accomodation_id}`)
-			.then((response) => (response.status == 200)? response.json() : naviguate("/404"))
+			.then((response) => (response.status === 200)? response.json() : naviguate("/404"))
 			.then((response) => set_logement(response))
 			.catch((err) => console.log(err))
 	}, [])

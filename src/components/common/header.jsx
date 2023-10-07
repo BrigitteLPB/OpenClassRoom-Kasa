@@ -8,7 +8,7 @@ function Header(){
 	const location = useLocation();
 
 	return (
-		<header className="page-wrapper header-wrapper">
+		<header className="header-wrapper">
 			<Logo/>
 			<nav>
 				<Link to="/" className={`text-primary-24px-desktop text-primary-18px-mobile ${location.pathname == "/" ? "select-nav" : ""}`}>Accueil</Link>

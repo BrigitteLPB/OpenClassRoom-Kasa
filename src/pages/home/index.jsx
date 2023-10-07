@@ -15,14 +15,16 @@ function Home() {
 	}, [])
 
 	return (
-		<div className="page-wrapper" id="home-page">
-			<h1 className="home-title text-tertiary-48px-desktop text-tertiary-24px-mobile" style={{
-				backgroundImage: `url(${home_banner})`,
-			}}>Chez vous, partout et ailleurs</h1>
+		<div id="home-page">
+			<div className="home-banner" style={{
+				backgroundImage: `url(${home_banner})`
+			}}>
+				<h1 className="home-title text-tertiary-48px-desktop text-tertiary-24px-mobile">Chez vous, partout et ailleurs</h1>
+			</div>
 			<div className="height-spacer"></div>
 			<div className="accomodation-list-wrapper">
 				{
-					(all_logements)? all_logements.map(logement => (
+					(all_logements) ? all_logements.map(logement => (
 						<AccomodationCard key={`accomodation-card-${logement.id}`} logement_data={logement} />
 					)) : null
 				}

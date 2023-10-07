@@ -5,7 +5,7 @@ import "style/pages/about.scss"
 
 function About() {
 	return (
-		<div id="page-about" className="page-wrapper">
+		<div id="page-about">
 			<div className="img-wrapper">
 				<img src={image} alt="A propos" />
 				<span className="img-over"/>
