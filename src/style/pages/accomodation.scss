@@ -27,6 +27,10 @@
 		margin: 50px 5%;
 	}
 
+	.carousel {
+		margin-bottom: 10px;
+	}
+
 	.accomodation-info-wrapper {
 		@include flex-container;
 		@include flex-50-desktop-100-mobile;
